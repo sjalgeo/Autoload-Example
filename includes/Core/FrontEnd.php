@@ -8,6 +8,8 @@
 
 namespace FreshStoreBuilder\Core;
 
+use FreshStoreBuilder\Controllers\AllProducts;
+use FreshStoreBuilder\Actions\GetProductsAction;
 
 class FrontEnd extends Application
 {
@@ -16,8 +18,10 @@ class FrontEnd extends Application
         parent::__construct($parameters);
     }
 
-    public function getHTML()
+    public function render()
     {
-        
+        $controller = new GetProductsAction();
+
+        $controller->execute();
     }
 }
