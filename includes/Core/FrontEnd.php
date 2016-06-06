@@ -1,15 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sjalgeo
- * Date: 11/05/2016
- * Time: 15:55
- */
 
 namespace FreshStoreBuilder\Core;
 
-use FreshStoreBuilder\Controllers\AllProducts;
 use FreshStoreBuilder\Actions\GetProductsAction;
+use Twig_Loader_Filesystem;
+use Twig_Environment;
+use Twig_Extension_Debug;
 
 class FrontEnd extends Application
 {
@@ -23,5 +19,17 @@ class FrontEnd extends Application
         $controller = new GetProductsAction();
 
         $controller->execute();
+		$data = $controller->fetchData();
+
+
+		$loader = new Twig_Loader_Filesystem('/Users/sjalgeo/GitHub/Autoload-Example/templates/mytemplate');
+		$twig = new Twig_Environment($loader, array(
+//			'cache' => '/Users/sjalgeo/GitHub/Autoload-Example/compilation_cache',
+			'cache' => false,
+			'debug'	=> true
+		));
+
+		$twig->addExtension(new Twig_Extension_Debug());
+		echo $twig->render('index.twig', $data);
     }
 }

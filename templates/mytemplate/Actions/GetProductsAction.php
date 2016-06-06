@@ -23,8 +23,6 @@ class GetProductsAction extends Action
             $products[] = $prod;
         }
 
-        $this->setValue('product-set', $products);
-
-        var_dump($products);
+        $this->setValue('productset', $products);
     }
 }

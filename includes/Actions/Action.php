@@ -23,4 +23,8 @@ class Action
         return isset( $this->data[$key] ) ? $this->data[$key] : null;
     }
 
+	public function fetchData()
+	{
+		return $this->data;
+	}
 }

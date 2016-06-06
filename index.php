@@ -58,6 +58,8 @@ function autoload_function( $class_name )
 spl_autoload_register('autoload_function');
 
 
+include_once ('vendor/autoload.php');
+
 $app = new FrontEnd(
     array(
         'ioncube_override' => true
