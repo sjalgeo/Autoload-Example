@@ -22,7 +22,7 @@ class FrontEnd extends Application
 		$data = $controller->fetchData();
 
 
-		$loader = new Twig_Loader_Filesystem('/Users/sjalgeo/GitHub/Autoload-Example/templates/mytemplate');
+		$loader = new Twig_Loader_Filesystem('/Users/sjalgeo/GitHub/Autoload-Example/templates/mytemplate/pages');
 		$twig = new Twig_Environment($loader, array(
 //			'cache' => '/Users/sjalgeo/GitHub/Autoload-Example/compilation_cache',
 			'cache' => false,
@@ -30,6 +30,6 @@ class FrontEnd extends Application
 		));
 
 		$twig->addExtension(new Twig_Extension_Debug());
-		echo $twig->render('index.twig', $data);
+		echo $twig->render($this->parameters['pagetype'].'.twig', $data);
     }
 }

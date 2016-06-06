@@ -22,7 +22,8 @@ include_once ('vendor/autoload.php');
 ## Go Time
 $app = new FrontEnd(
     array(
-        'ioncube_override' => true
+        'ioncube_override' => true,
+		'pagetype' => array_lookup($_GET, 'q')
     )
 );
 

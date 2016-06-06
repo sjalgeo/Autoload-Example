@@ -2,3 +2,5 @@
 vendor
 .idea
 compilation_cache/
+templates/mytemplate/composer.json
+templates/mytemplate/composer.lock
