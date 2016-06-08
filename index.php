@@ -9,14 +9,15 @@ use FreshStoreBuilder\Core\FrontEnd;
 
 
 ## Define Absolutely Core Items
+define ('PATH_ROOT', $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR );
 define ('PATH_INCLUDES', $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'includes');
-define ('PATH_TEMPLATE', $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'templates/mytemplate');
+define ('PATH_TEMPLATE', $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'templates/mytemplate' . DIRECTORY_SEPARATOR);
 
 
 ## Include Stuff to Autoload
-include_once ('library/misc.php');
-include_once ('autoload.php');
-include_once ('vendor/autoload.php');
+include_once ( 'library/misc.php' );
+include_once ( 'autoload.php' );
+include_once ( 'vendor/autoload.php' );
 
 
 ## Go Time

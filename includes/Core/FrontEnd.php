@@ -11,6 +11,7 @@ class FrontEnd extends Application
 {
     public function __construct($parameters)
     {
+        if ( ! $parameters['pagetype'] ) $parameters['pagetype'] = 'homepage';
         parent::__construct($parameters);
     }
 
@@ -22,7 +23,7 @@ class FrontEnd extends Application
 		$data = $controller->fetchData();
 
 
-		$loader = new Twig_Loader_Filesystem('/Users/sjalgeo/GitHub/Autoload-Example/templates/mytemplate/pages');
+		$loader = new Twig_Loader_Filesystem( PATH_TEMPLATE . 'pages' . DIRECTORY_SEPARATOR);
 		$twig = new Twig_Environment($loader, array(
 //			'cache' => '/Users/sjalgeo/GitHub/Autoload-Example/compilation_cache',
 			'cache' => false,
