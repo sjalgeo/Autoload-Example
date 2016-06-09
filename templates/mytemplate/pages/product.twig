@@ -1,0 +1,62 @@
+{% extends '@core/pages/base.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4">
+            <img alt="Bootstrap Image Preview" src="http://placehold.it/300x300" />
+        </div>
+        <div class="col-md-4">
+            <h3>
+                h3. Lorem ipsum dolor sit amet.
+            </h3>
+            <ul>
+                <li>
+                    Lorem ipsum dolor sit amet
+                </li>
+                <li>
+                    Consectetur adipiscing elit
+                </li>
+                <li>
+                    Integer molestie lorem at massa
+                </li>
+                <li>
+                    Facilisis in pretium nisl aliquet
+                </li>
+                <li>
+                    Nulla volutpat aliquam velit
+                </li>
+                <li>
+                    Faucibus porta lacus fringilla vel
+                </li>
+                <li>
+                    Aenean sit amet erat nunc
+                </li>
+                <li>
+                    Eget porttitor lorem
+                </li>
+            </ul>
+
+            <button type="button" class="btn btn-success">
+                Default
+            </button>
+            <button type="button" class="btn btn-info">
+                Default
+            </button>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            {% embed '@core/components/text.twig' %}{% endembed %}
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+{% endblock %}

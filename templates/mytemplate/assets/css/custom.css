@@ -1,0 +1,16 @@
+.blocco_esterno {
+    /*background-color: blue;*/
+}
+
+.blocco_interno {
+    /*background-color: red;*/
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 5px solid grey;
+    margin: 10px;
+}
+
+.contenuto {
+    height: 120px;
+    text-align: center;
+}

@@ -1,0 +1,69 @@
+{% extends '@core/pages/base.twig' %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>
+            Basket
+        </h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    Product
+                </th>
+                <th>
+                    Total
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    Product One
+                </td>
+                <td>
+                    $9.99
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    2
+                </td>
+                <td>
+                    Product Two, the one with the long name
+                </td>
+
+                <td>
+                    $9.99
+                </td>
+            </tr>
+            <tr class="active">
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    $19.98
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <button type="button" class="btn btn-default">
+            Checkout at Amazon
+        </button>
+    </div>
+</div>
+
+{% endblock %}

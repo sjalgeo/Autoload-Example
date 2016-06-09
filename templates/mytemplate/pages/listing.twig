@@ -1,0 +1,25 @@
+{% extends '@core/pages/base.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+
+    {% for productname in ['product 1','product 2','product 3','product 4','product 5', 'product 6'] %}
+
+        {% embed "@core/product-list/product-list-item.twig" %}
+
+            {% block name %}
+                {{ productname }}
+            {% endblock %}
+
+        {% endembed %}
+
+    {% endfor %}
+
+{% endblock %}
