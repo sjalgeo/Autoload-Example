@@ -23,14 +23,20 @@ class FrontEnd extends Application
 		$data = $controller->fetchData();
 
 
-		$loader = new Twig_Loader_Filesystem( PATH_TEMPLATE . 'pages' . DIRECTORY_SEPARATOR);
+		$loader = new Twig_Loader_Filesystem( PATH_TEMPLATE );
+
+        $loader->addPath( PATH_TEMPLATE, 'core');
+//        $loader->addPath( dirname(__DIR__). '/src/Test/User/Resources/views', 'user');
+
 		$twig = new Twig_Environment($loader, array(
 //			'cache' => '/Users/sjalgeo/GitHub/Autoload-Example/compilation_cache',
 			'cache' => false,
 			'debug'	=> true
 		));
 
+
+
 		$twig->addExtension(new Twig_Extension_Debug());
-		echo $twig->render($this->parameters['pagetype'].'.twig', $data);
+		echo $twig->render('@core/pages/'.$this->parameters['pagetype'].'.twig', $data);
     }
 }
